@@ -4,7 +4,14 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        var miAutomovil = new Automovil();
-        var miTractor = new Tractor();
+        string marca = Console.ReadLine();
+        if (marca == "BMW")
+        {
+            var miAutomovil = new Automovil();
+        }
+        if (marca == "Kubota")
+        {
+            var miTractor = new Tractor();
+        }
     }
 }

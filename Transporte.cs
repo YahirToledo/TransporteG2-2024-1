@@ -9,15 +9,14 @@ namespace TransporteG2_2024_1
     internal abstract class Transporte
     {
         #region Atributos
-        private string marca;
-        private ushort añoProduccion;
+        public string marca;
+        public ushort añoProduccion;
         #endregion
 
         #region Metodo
         public void SeñalarMarca()
         {
-            Console.WriteLine("Marca: ");
-            string marca = Console.ReadLine();
+            añoProduccion = 2023;
         }
         #endregion
     }
