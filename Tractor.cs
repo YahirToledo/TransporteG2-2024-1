@@ -10,11 +10,8 @@ namespace TransporteG2_2024_1
     {
         public Tractor()
         {
-            SeñalarMarca();
-            if(marca == "Kubota")
-            {
-                Console.WriteLine("Tractor");
-            }
+            SeñalarAñoProduccion();
+            Console.WriteLine("Tractor");
         }
     }
 }

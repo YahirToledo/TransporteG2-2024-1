@@ -10,11 +10,8 @@ namespace TransporteG2_2024_1
     {
         public Automovil()
         {
-            SeñalarMarca();
-            if (marca == "BMW")
-            {
-                Console.WriteLine("Automovil");
-            }
+            SeñalarAñoProduccion();
+            Console.WriteLine("Automovil");
         }
     }
 }

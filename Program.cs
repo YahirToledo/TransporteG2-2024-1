@@ -1,17 +1,14 @@
 ﻿using TransporteG2_2024_1;
+using System.Threading;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        string marca = Console.ReadLine();
-        if (marca == "BMW")
-        {
-            var miAutomovil = new Automovil();
-        }
-        if (marca == "Kubota")
-        {
-            var miTractor = new Tractor();
-        }
+        Console.WriteLine("Bienvenido!");
+        Thread.Sleep(1000);
+        var miAutomovil = new Automovil();
+        Thread.Sleep(1000);
+        var miTractor = new Tractor();
     }
 }

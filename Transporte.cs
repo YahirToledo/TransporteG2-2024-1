@@ -14,9 +14,10 @@ namespace TransporteG2_2024_1
         #endregion
 
         #region Metodo
-        public void SeñalarMarca()
+        public void SeñalarAñoProduccion()
         {
             añoProduccion = 2023;
+            Console.WriteLine("Año de produccion: {0}", añoProduccion);
         }
         #endregion
     }
