@@ -12,6 +12,23 @@ namespace TransporteG2_2024_1
         {
             SeñalarAñoProduccion();
             Console.WriteLine("Automovil");
+            Console.WriteLine("A: Acelerar");
+            Console.WriteLine("F: Frenar");
+            string accion = Console.ReadLine();
+            LimpiarDisplay();
+            switch (accion)
+            {
+                case "A":
+                    Acelerar(velocidad);
+                    break;
+                case "F":
+                    Frenar(velocidad);
+                    break;
+                default:
+                    Console.WriteLine("Escriba una ccion valida");
+                    break;
+            }
         }
+
     }
 }

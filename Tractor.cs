@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,13 +15,13 @@ namespace TransporteG2_2024_1
             get => base.Velocidad;
             set
             {
-                if (0 < value && value < 150)
+                if (value < 50)
                 {
                     velocidad = value;
                 }
                 else
                 {
-                    velocidad = 60
+                    velocidad = 30;
                 }
             } 
         }
@@ -30,12 +31,39 @@ namespace TransporteG2_2024_1
         {
             SeñalarAñoProduccion();
             Console.WriteLine("Tractor");
+            Console.WriteLine("A: Acelerar");
+            Console.WriteLine("F: Frenar");
+            string accion = Console.ReadLine();
             LimpiarDisplay();
-            
-        }
-        public override void Tractor(string accion)
-        {
+            switch (accion)
+            {
+                case "A":
+                    Acelerar(velocidad);
+                    break;
+                case "F":
+                    Frenar(velocidad);
+                    break;
+                default:
+                    Console.WriteLine("Escriba una ccion valida"); 
+                    break;
+            }
 
+        }
+        public override void Acelerar(float velocidad)
+        {
+            Console.WriteLine("El tractor esta a {0} [km/h]", velocidad);
+            LimpiarDisplay();
+            Console.WriteLine("Acelerando");
+            LimpiarDisplay();
+            Console.WriteLine("Ahora esta a {0} [km/h]", velocidad + 20);
+        }
+        public override void Frenar(float velocidad)
+        {
+            Console.WriteLine("El tractor esta a {0} [km/h]", velocidad);
+            LimpiarDisplay();
+            Console.WriteLine("Frenando");
+            LimpiarDisplay();
+            Console.WriteLine("Ahora esta a {0} [km/h]", velocidad - 20);
         }
     }
 }

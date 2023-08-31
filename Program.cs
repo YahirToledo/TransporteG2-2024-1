@@ -9,6 +9,8 @@ internal class Program
         Thread.Sleep(1000);
         var miAutomovil = new Automovil();
         Thread.Sleep(1000);
+        Console.Clear();
         var miTractor = new Tractor();
+        Console.ReadLine();
     }
 }
